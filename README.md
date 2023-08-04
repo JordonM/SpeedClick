@@ -22,7 +22,7 @@ As a user I want to...
  
 Wireframe == 
 Home Page ![image](https://media.git.generalassemb.ly/user/49403/files/5800a63f-1882-4561-b596-3025fe584cd4) 
-Game Starting ![image](https://media.git.generalassemb.ly/user/49403/files/819eb691-d383-48dd-b4e6-90d2d1a60465)
+Game Starting (the arrows represent the progress to the finishing point) ![image](https://media.git.generalassemb.ly/user/49403/files/819eb691-d383-48dd-b4e6-90d2d1a60465)
 Gold Score (Complete above 6 seconds left)![image](https://media.git.generalassemb.ly/user/49403/files/5ef856e4-5500-4efd-abbf-b5c5aa4b3e51)
 Silver Score (Complete above 2 seconds left) ![image](https://media.git.generalassemb.ly/user/49403/files/4644b34c-968e-4f53-b2c4-49417998610f)
 Bronze Score (Complete above 0.01 seconds left) ![image](https://media.git.generalassemb.ly/user/49403/files/c4249c15-356e-47db-b367-c40af34bfef9)
