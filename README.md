@@ -30,5 +30,4 @@ Bronze Score (Complete above 0.01 seconds left) ![image](https://media.git.gener
 Game Over (Didnt complete in 10 seconds) ![image](https://media.git.generalassemb.ly/user/49403/files/e065827c-6a8c-4adc-a5f7-c287deb95268)
 Time Viewer (Shows either the fastest completion time or most recent completion time) ![image](https://media.git.generalassemb.ly/user/49403/files/96cc68e6-431c-432a-a09a-63efd30e2b6a)
 
-ERDs ==
-![image](https://media.git.generalassemb.ly/user/49403/files/421200fe-fc18-439d-a3c7-b7b19f6628c8)
+
