@@ -14,26 +14,73 @@
 <body>
   <script src="script.js"></script>
   <header> Speed Click </header>
-  <h2> Begin </h2>
-  <timer> Timer </timer>
+  
+  <timer> You have <span id="countdowntimer">10 </span> Seconds Remaining </timer>
   <section>
     <section id="path">
-      <div id="start"></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div id="finish"></div>
+      <div class=progress id="start"></div>
+      <div class=progress id="p1"></div>
+      <div class=progress id="p2"></div>
+      <div class=progress id="p3"></div>
+      <div class=progress id="p4"></div>
+      <div class=progress id="p5"></div>
+      <div class=progress id="p6"></div>
+      <div class=progress id="finish"></div>
   </section> 
 <main>
-  <button class="play"> PLAY AGAIN </button>
-  <button class="control"> ADVANCE </button>
+  <p id="demo"></p>
 
+  <button id="play" type="button" onclick="playAgain()"> PLAY AGAIN </button>
 </main>
-
+<script> document.getElementById("start").addEventListener("click", displayDate);
+document.getElementById("p1").addEventListener("click", displayDate1);
+  document.getElementById("p2").addEventListener("click", displayDate2);
+  document.getElementById("p3").addEventListener("click", displayDate3);
+  document.getElementById("p4").addEventListener("click", displayDate4);
+  document.getElementById("p5").addEventListener("click", displayDate5);
+  document.getElementById("p6").addEventListener("click", displayDate6);
+   document.getElementById("p7").addEventListener("click", displayDate7);
+function displayDate() {
+  
+  document.getElementById("start").style.backgroundColor = "red";
+}
+function displayDate1() {
+  
+  document.getElementById("p1").style.backgroundColor = "red";
+}
+  function displayDate2() {
+  
+  document.getElementById("p2").style.backgroundColor = "red";
+}
+  function displayDate3() {
+  
+  document.getElementById("p3").style.backgroundColor = "red";
+}
+  function displayDate4() {
+  
+  document.getElementById("p4").style.backgroundColor = "red";
+}
+  function displayDate5() {
+  
+  document.getElementById("p5").style.backgroundColor = "red";
+}
+  function displayDate6() {
+  
+  document.getElementById("p6").style.backgroundColor = "red";
+}
+  function displayDate7() {
+  
+  document.getElementById("finish").style.backgroundColor = "green";
+    document.getElementById("p6").style.backgroundColor = "green";
+    document.getElementById("p5").style.backgroundColor = "green";
+    document.getElementById("p4").style.backgroundColor = "green";
+    document.getElementById("p3").style.backgroundColor = "green";
+    document.getElementById("p2").style.backgroundColor = "green";
+    document.getElementById("p1").style.backgroundColor = "green";
+    document.getElementById("start").style.backgroundColor = "green";
+}
+  
+</script>
   <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
   
 </body>
