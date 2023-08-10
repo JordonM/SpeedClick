@@ -10,6 +10,7 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 h2 {
   background-color: black
 }
@@ -38,10 +39,9 @@ header {
 }
 timer {
   display: inline-block;
-  background-color: white;
-  border-radius: 1vmin;
+  border-radius: 3vmin;
   border:10px black;
-  font-size:8vmin;
+  font-size:3vmin;
     margin-top: 4vmin;
     margin-bottom: 4vmin;
   
