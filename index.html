@@ -2,87 +2,259 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SpeedClick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <script src="script.js"></script>
-  <header> Speed Click </header>
-  
-  <timer> You have <span id="countdowntimer">10 </span> Seconds Remaining </timer>
-  <section>
-    <section id="path">
-      <div class=progress id="start"></div>
-      <div class=progress id="p1"></div>
-      <div class=progress id="p2"></div>
-      <div class=progress id="p3"></div>
-      <div class=progress id="p4"></div>
-      <div class=progress id="p5"></div>
-      <div class=progress id="p6"></div>
-      <div class=progress id="finish"></div>
-  </section> 
-<main>
-  <p id="demo"></p>
+    <script src="script.js"></script>
+    <header> Speed Click </header>
+    <timer> You Have <span id="countdowntimer">10 </span> Seconds Remaining </timer>
+    <section>
+        <section id="path">
+            <div class=progress id="start"></div>
+            <div class=progress id="p1"></div>
+            <div class=progress id="p2"></div>
+            <div class=progress id="p3"></div>
+            <div class=progress id="p4"></div>
+            <div class=progress id="p5"></div>
+            <div class=progress id="p6"></div>
+            <div class=progress id="finish"></div>
+        </section>
+        <main>
+            <p id="demo"></p>
+            <div id="ingame"></div>
+            <button id="play" type="button" onclick="playAgain()"> PLAY AGAIN </button>
+            <button id="final" type="button" onclick="gameComplete()"> FINISH </button>
+        </main>
+        <style>
+            html {
+                height: 100%;
+                width: 100%;
+            }
 
-  <button id="play" type="button" onclick="playAgain()"> PLAY AGAIN </button>
-</main>
-<script> document.getElementById("start").addEventListener("click", displayDate);
-document.getElementById("p1").addEventListener("click", displayDate1);
-  document.getElementById("p2").addEventListener("click", displayDate2);
-  document.getElementById("p3").addEventListener("click", displayDate3);
-  document.getElementById("p4").addEventListener("click", displayDate4);
-  document.getElementById("p5").addEventListener("click", displayDate5);
-  document.getElementById("p6").addEventListener("click", displayDate6);
-   document.getElementById("p7").addEventListener("click", displayDate7);
-function displayDate() {
-  
-  document.getElementById("start").style.backgroundColor = "red";
-}
-function displayDate1() {
-  
-  document.getElementById("p1").style.backgroundColor = "red";
-}
-  function displayDate2() {
-  
-  document.getElementById("p2").style.backgroundColor = "red";
-}
-  function displayDate3() {
-  
-  document.getElementById("p3").style.backgroundColor = "red";
-}
-  function displayDate4() {
-  
-  document.getElementById("p4").style.backgroundColor = "red";
-}
-  function displayDate5() {
-  
-  document.getElementById("p5").style.backgroundColor = "red";
-}
-  function displayDate6() {
-  
-  document.getElementById("p6").style.backgroundColor = "red";
-}
-  function displayDate7() {
-  
-  document.getElementById("finish").style.backgroundColor = "green";
-    document.getElementById("p6").style.backgroundColor = "green";
-    document.getElementById("p5").style.backgroundColor = "green";
-    document.getElementById("p4").style.backgroundColor = "green";
-    document.getElementById("p3").style.backgroundColor = "green";
-    document.getElementById("p2").style.backgroundColor = "green";
-    document.getElementById("p1").style.backgroundColor = "green";
-    document.getElementById("start").style.backgroundColor = "green";
-}
-  
-</script>
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
-  
+            body {
+                background-image: url("https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_760/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.webp");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                font-family: 'Raleway', sans-serif;
+                height:100vh;
+                margin: 0;
+            }
+
+            h2 {
+                background-color: black
+            }
+
+            header {
+                color: #f7eeee;
+                background-color: #6153d0;
+                border-radius: 2vmin;
+                font-size: 6vmin;
+                letter-spacing: 2vmin;
+            }
+
+            #path {
+                display: grid;
+                grid-template-columns: repeat(9, 9vmin);
+                grid-template-rows: repeat(1, 10vmin);
+                gap: 1.5vmin;
+                margin-top: 1vmin;
+            }
+
+            #path>div {
+                border: 0.8vmin solid grey;
+                border-radius: 50%;
+            }
+
+            timer {
+                display: inline-block;
+                border-radius: 3vmin;
+                border: 10px black;
+                font-size: 5vmin;
+                margin-top: 4vmin;
+                margin-bottom: 4vmin;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            button {
+                display:inline-block;
+                color: grey;
+                border: 0.1vmin solid grey;
+                border-radius: 2vmin;
+                font-size: 4vmin;
+                margin-top: 4vmin;
+                margin-bottom: 4vmin;
+            }
+
+            #play {
+                display: inline-block;
+                background: #e6c700;
+                color: white;
+                align-self: flex-end;
+            }
+
+            #final {
+                align-self: flex-end;
+                color: white;
+                background: lightgreen;
+            }
+
+            #final:hover {
+                color: white;
+                background-color: darkgrey;
+            }
+
+            #play:hover {
+                color: white;
+                background-color: darkgrey;
+            }
+
+            #ingame {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 3vmin;
+                border: 10px black;
+                font-size: 10vmin;
+                margin-top: 4vmin;
+                margin-bottom: 4vmin;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+            }
+        </style>
+        <script>
+            var win = 0;
+            document.getElementById("start").addEventListener("click", displayDate);
+            document.getElementById("p1").addEventListener("click", displayDate1);
+            document.getElementById("p2").addEventListener("click", displayDate2);
+            document.getElementById("p3").addEventListener("click", displayDate3);
+            document.getElementById("p4").addEventListener("click", displayDate4);
+            document.getElementById("p5").addEventListener("click", displayDate5);
+            document.getElementById("p6").addEventListener("click", displayDate6);
+            document.getElementById("finish").addEventListener("click", displayDate7);
+
+            function displayDate() {
+                document.getElementById("start").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate1() {
+                document.getElementById("p1").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate2() {
+                document.getElementById("p2").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate3() {
+                document.getElementById("p3").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate4() {
+                document.getElementById("p4").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate5() {
+                document.getElementById("p5").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate6() {
+                document.getElementById("p6").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+
+            function displayDate7() {
+                document.getElementById("finish").style.backgroundColor = "red";
+                win++;
+                console.log(win)
+            }
+            Countdown();
+
+            function Countdown() {
+                var timeleft = 10;
+                var downloadTimer = setInterval(function gameStart() {
+                    timeleft--;
+                    document.getElementById("countdowntimer").textContent = timeleft;
+                    if (timeleft < 0) {
+                        document.getElementById("ingame").innerHTML = "GAME OVER ";
+                        clearInterval(downloadTimer)
+                    } else if (timeleft === 0) {
+                        console.log(timeleft);
+                        gameOver();
+                    }
+                }, 1000);
+            }
+            // Gameover function after timer depletes
+            function gameOver() {
+                document.getElementById("play").style.backgroundColor = "green";
+                document.getElementById("play").style.color = "white";
+                win.innerHTML = 0;
+                console.log("completed");
+                console.log(win);
+            }
+
+            function gameComplete() {
+                console.log(win)
+                if (win >= 6) {
+                    document.getElementById("ingame").innerHTML = "YOU WON";
+                    document.getElementById("countdowntimer").textContent = 0;
+                } else {
+                    document.getElementById("ingame").innerHTML = "NOT QUITE FINISHED";
+                }
+            }
+
+            function playAgain() {
+                document.getElementById("play").style.backgroundColor = "#e6c700";
+                document.getElementById("ingame").innerHTML = "TRY AGAIN";
+                document.getElementById("finish").style.backgroundColor = "";
+                document.getElementById("p6").style.backgroundColor = "";
+                document.getElementById("p5").style.backgroundColor = "";
+                document.getElementById("p4").style.backgroundColor = "";
+                document.getElementById("p3").style.backgroundColor = "";
+                document.getElementById("p2").style.backgroundColor = "";
+                document.getElementById("p1").style.backgroundColor = "";
+                document.getElementById("start").style.backgroundColor = "";
+                var timeleft = 10;
+                var downloadTimer = setInterval(function gameStart() {
+                    timeleft--;
+                    document.getElementById("countdowntimer").textContent = timeleft;
+                    if (timeleft < 0) {
+                        document.getElementById("ingame").innerHTML = "GAME OVER ";
+                        clearInterval(downloadTimer)
+                    } else if (timeleft === 0) {
+                        console.log(timeleft);
+                        gameOver();
+                    }
+                }, 1000);
+            }
+            // event listener
+        </script>
+        
 </body>
 
 </html>
