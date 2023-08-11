@@ -1,63 +1,65 @@
-var win = 0;
-document.getElementById("start").addEventListener("click", displayDate);
-document.getElementById("p1").addEventListener("click", displayDate1);
-document.getElementById("p2").addEventListener("click", displayDate2);
-document.getElementById("p3").addEventListener("click", displayDate3);
-document.getElementById("p4").addEventListener("click", displayDate4);
-document.getElementById("p5").addEventListener("click", displayDate5);
-document.getElementById("p6").addEventListener("click", displayDate6);
-document.getElementById("finish").addEventListener("click", displayDate7);
 
-function displayDate() {
+var win = 0;
+// Using the Div circles to help get win condition
+document.getElementById("start").addEventListener("click", display);
+document.getElementById("p1").addEventListener("click", display1);
+document.getElementById("p2").addEventListener("click", display2);
+document.getElementById("p3").addEventListener("click", display3);
+document.getElementById("p4").addEventListener("click", display4);
+document.getElementById("p5").addEventListener("click", display5);
+document.getElementById("p6").addEventListener("click", display6);
+document.getElementById("finish").addEventListener("click", display7);
+
+function display() {
     document.getElementById("start").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate1() {
+function display1() {
     document.getElementById("p1").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate2() {
+function display2() {
     document.getElementById("p2").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate3() {
+function display3() {
     document.getElementById("p3").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate4() {
+function display4() {
     document.getElementById("p4").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate5() {
+function display5() {
     document.getElementById("p5").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate6() {
+function display6() {
     document.getElementById("p6").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
 
-function displayDate7() {
+function display7() {
     document.getElementById("finish").style.backgroundColor = "red";
     win++;
     console.log(win);
 }
-Countdown();
+renderCountdown();
 
-function Countdown() {
+function renderCountdown() {
     var timeleft = 10;
     var downloadTimer = setInterval(function gameStart() {
         timeleft--;
@@ -77,9 +79,10 @@ function gameOver() {
     document.getElementById("play").style.color = "white";
     win.innerHTML = 0;
     console.log("completed");
-    console.log(win);
+
 }
 
+// Function that allows win/lose condition
 function gameComplete() {
     console.log(win);
     if (win >= 6) {
@@ -90,6 +93,7 @@ function gameComplete() {
     }
 }
 
+// The function that the playAgainButton uses
 function playAgain() {
     document.getElementById("play").style.backgroundColor = "#e6c700";
     document.getElementById("ingame").innerHTML = "TRY AGAIN";
@@ -114,5 +118,3 @@ function playAgain() {
         }
     }, 1000);
 }
-
-
