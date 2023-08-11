@@ -1,6 +1,7 @@
 
 var win = 0;
 // Using the Div circles to help get win condition
+// Each win++ contributes to win check
 document.getElementById("start").addEventListener("click", display);
 document.getElementById("p1").addEventListener("click", display1);
 document.getElementById("p2").addEventListener("click", display2);
@@ -13,50 +14,43 @@ document.getElementById("finish").addEventListener("click", display7);
 function display() {
     document.getElementById("start").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display1() {
     document.getElementById("p1").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display2() {
     document.getElementById("p2").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display3() {
     document.getElementById("p3").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display4() {
     document.getElementById("p4").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display5() {
     document.getElementById("p5").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display6() {
     document.getElementById("p6").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
 
 function display7() {
     document.getElementById("finish").style.backgroundColor = "red";
     win++;
-    console.log(win);
 }
+
 renderCountdown();
 
 function renderCountdown() {
@@ -72,6 +66,7 @@ function renderCountdown() {
             gameOver();
         }
     }, 1000);
+    // When the timer is over use gameOver function
 }
 // Gameover function after timer depletes
 function gameOver() {
