@@ -85,7 +85,7 @@ function gameOver() {
 // Function that allows win/lose condition
 function gameComplete() {
     console.log(win);
-    if (win >= 6) {
+    if (win >= 8) {
         document.getElementById("ingame").innerHTML = "YOU WON";
         document.getElementById("countdowntimer").textContent = 0;
     } else {
