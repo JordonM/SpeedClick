@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_760/MTkzODAzNTgyODUxMDY1MzI4/cool-css-backgrounds.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Raleway", sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    background-color: black;
+}
+
+header {
+    color: #f7eeee;
+    background-color: #6153d0;
+    border-radius: 2vmin;
+    font-size: 6vmin;
+    letter-spacing: 2vmin;
+}
+
+#path {
+    display: grid;
+    grid-template-columns: repeat(9, 9vmin);
+    grid-template-rows: repeat(1, 10vmin);
+    gap: 1.5vmin;
+    margin-top: 1vmin;
+}
+
+#path > div {
+    border: 0.8vmin solid grey;
+    border-radius: 50%;
+}
+
+timer {
+    display: inline-block;
+    border-radius: 3vmin;
+    border: 10px black;
+    font-size: 5vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    font-family: "Raleway", sans-serif;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    color: grey;
+    border: 0.1vmin solid grey;
+    border-radius: 2vmin;
+    font-size: 4vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+}
+
+#play {
+    display: inline-block;
+    background: #e6c700;
+    color: white;
+    align-self: flex-end;
+}
+
+#final {
+    align-self: flex-end;
+    color: white;
+    background: lightgreen;
+}
+
+#final:hover {
+    color: white;
+    background-color: darkgrey;
+}
+
+#play:hover {
+    color: white;
+    background-color: darkgrey;
+}
+
+#ingame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3vmin;
+    border: 10px black;
+    font-size: 10vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    font-family: "Raleway", sans-serif;
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
