@@ -35,14 +35,14 @@ InGame Screenshots ==
 ![image](https://github.com/JordonM/SpeedClick/assets/14878928/c5b74905-eedb-4454-9727-56e2c3ee86ee)
 
 Getting Started == 
-Instructions: Click on all unclicked buttons then press FINISH.
-Tip: Unlike PLAY AGAIN after GAME OVER screen.
+  - Instructions: Click on all unclicked buttons then press FINISH.
+  - Tip: Unlike PLAY AGAIN after GAME OVER screen.
 
 Next Steps == 
-Allow players to change difficulty of the timer.
-Rework the PLAY AGAIN function.
-Include a main menu screen.
-Allow players to change the color of the circles.
+  - Allow players to change difficulty of the timer.
+  - Rework the PLAY AGAIN function.
+  - Include a main menu screen.
+  - Allow players to change the color of the circles.
 
 
 
