@@ -29,8 +29,10 @@
         <main>
             <p id="demo"></p>
             <div id="ingame"></div>
+            <div id="buttons">
             <button id="play" type="button" onclick="playAgain()"> PLAY AGAIN </button>
             <button id="final" type="button" onclick="gameComplete()"> FINISH </button>
+            </div>
         </main>
         <style>
             html {
@@ -85,8 +87,14 @@
                 font-family: 'Raleway', sans-serif;
             }
 
+            #buttons {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+          }
+
             button {
-                display:inline-block;
+
                 color: grey;
                 border: 0.1vmin solid grey;
                 border-radius: 2vmin;
